@@ -1,0 +1,84 @@
+@mixin flexItems {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.navbar {
+	@include flexItems;
+	padding: 10px;
+	.logo {
+		width: 25px;
+		height: 25px;
+	}
+	.navbar_hamburger {
+		display: none;
+	}
+	.navbar_links {
+		flex: 0.4;
+		@include flexItems;
+		.link {
+			text-decoration: none;
+			color: black;
+			transition: transform ease-in-out 300ms;
+			&:hover {
+				color: purple;
+				transform: scale(1.1);
+			}
+		}
+	}
+	.navbar_cart {
+		position: relative;
+		cursor: pointer;
+		.cart_items_number {
+			position: absolute;
+			top: -4px;
+			right: -6px;
+			width: 15px;
+			height: 15px;
+			font-size: 7.5px;
+			border-radius: 50%;
+			background-color: purple;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.hamburger {
+		cursor: pointer;
+	}
+}
+@media screen and(max-width:830px) {
+	.navbar {
+		position: relative;
+		justify-content: space-around;
+
+		.navbar_hamburger {
+			display: inline-block;
+		}
+		.navbar_links {
+			display: none;
+		}
+		.smallDevice {
+			height: 100px;
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items:center;
+			transition: height 300ms;
+			text-decoration: none;
+
+			top: 40px;
+			width: 100%;
+			overflow: hidden;
+			background-image: linear-gradient(to top, purple, rgb(185, 28, 86));
+			.link {
+				color: white;
+				&:hover {
+					color: gray;
+				}
+			}
+		}
+	}
+}

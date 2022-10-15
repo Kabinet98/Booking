@@ -1,0 +1,125 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.navbar .logo {
+  width: 25px;
+  height: 25px;
+}
+
+.navbar .navbar_hamburger {
+  display: none;
+}
+
+.navbar .navbar_links {
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar_links .link {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: -webkit-transform ease-in-out 300ms;
+  transition: -webkit-transform ease-in-out 300ms;
+  transition: transform ease-in-out 300ms;
+  transition: transform ease-in-out 300ms, -webkit-transform ease-in-out 300ms;
+}
+
+.navbar .navbar_links .link:hover {
+  color: purple;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.navbar .navbar_cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar .navbar_cart .cart_items_number {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  width: 15px;
+  height: 15px;
+  font-size: 7.5px;
+  border-radius: 50%;
+  background-color: purple;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .hamburger {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 830px) {
+  .navbar {
+    position: relative;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .navbar .navbar_hamburger {
+    display: inline-block;
+  }
+  .navbar .navbar_links {
+    display: none;
+  }
+  .navbar .smallDevice {
+    height: 100px;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: height 300ms;
+    transition: height 300ms;
+    text-decoration: none;
+    top: 40px;
+    width: 100%;
+    overflow: hidden;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(purple), to(#b91c56));
+    background-image: linear-gradient(to top, purple, #b91c56);
+  }
+  .navbar .smallDevice .link {
+    color: white;
+  }
+  .navbar .smallDevice .link:hover {
+    color: gray;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */
